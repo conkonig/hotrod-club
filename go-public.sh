@@ -64,7 +64,7 @@ else
 fi
 
 # ===== PUSH =====
-git push -u origin main
+git push -u origin master
 
 # ===== ENABLE GITHUB PAGES =====
 echo "🌐 Enabling GitHub Pages..."
