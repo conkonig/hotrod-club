@@ -98,6 +98,10 @@
         .hero-gradient {
             background: linear-gradient(to top, rgba(30, 27, 22, 0.9) 0%, rgba(30, 27, 22, 0.4) 50%, rgba(30, 27, 22, 0.1) 100%);
         }
+
+        .hero-video-overlay {
+            background: linear-gradient(180deg, rgba(30, 27, 22, 0.42) 0%, rgba(30, 27, 22, 0.28) 35%, rgba(30, 27, 22, 0.72) 100%);
+        }
     </style>
 </head>
 
@@ -132,9 +136,12 @@
         <!-- Hero Section -->
         <section class="relative h-[870px] w-full overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover"
-                    data-alt="A lineup of colorful vintage hot rods parked at a coastal New Zealand car meet during golden hour with clear skies."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwBZ6NEn2OBuxjzg-XBqWxen1Lj2rqNiR8SNs_PiU3OzvT-kibcp0rzidJlbfegx5lTviCb-CTqshhTrxNh1Jk1Al5OdiYKoXSKx7kVmWlAVJC1Ap9xYLjJJEwxbf-vftnmxaSDGls_0XwYd5GAGCs7ZpapTKL_-f7cRboNHv2N1bWfrv3u0LVjVbHeUaKTtrdWHvz998A_tk8pgRKf7zeh3wkirvA4_8QUxOR--nr0fmBGfePGAsdGURxCkCJPO4J2R-Y7mM" />
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="metadata"
+                    poster="assets/hot-rod-race-enhanced.webp"
+                    aria-label="A lineup of colorful vintage hot rods racing by during golden hour.">
+                    <source src="assets/hot-rod-race.mp4" type="video/mp4" />
+                </video>
+                <div class="absolute inset-0 hero-video-overlay"></div>
                 <div class="absolute inset-0 hero-gradient"></div>
                 <div class="absolute inset-0 grainy-overlay"></div>
             </div>
@@ -161,7 +168,6 @@
             <!-- Large background text -->
             <div
                 class="absolute bottom-[-2rem] right-[-2rem] opacity-5 pointer-events-none select-none hidden lg:block">
-                <span class="font-headline font-black text-[20rem] text-white uppercase tracking-tighter">1961</span>
             </div>
         </section>
         <!-- Events Section -->
