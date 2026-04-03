@@ -22,10 +22,10 @@ echo "🚀 Deploying '$REPO_NAME' to GitHub Pages..."
 
 # ===== INIT REPO IF NEEDED =====
 if [ ! -d ".git" ]; then
-  git init -b main
+  git init -b master
 fi
 
-git branch -M main
+git branch -M master
 
 # ===== PREPARE DOCS FOLDER =====
 mkdir -p docs
@@ -71,7 +71,7 @@ echo "🌐 Enabling GitHub Pages..."
 gh api \
   -X POST \
   "repos/$GITHUB_USER/$REPO_NAME/pages" \
-  -f source[branch]=main \
+  -f source[branch]=master \
   -f source[path]="/docs" >/dev/null 2>&1 || true
 
 # ===== OUTPUT URL =====
