@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#33302a",
+                        "surface-container-highest": "#e9e1d8",
+                        "on-primary-fixed": "#410002",
+                        "on-tertiary-fixed": "#1e1b12",
+                        "tertiary-container": "#545045",
+                        "surface-container-low": "#faf3e9",
+                        "surface-container-high": "#eee7de",
+                        "inverse-on-surface": "#f7f0e6",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#e0d9d0",
+                        "on-surface": "#1e1b16",
+                        "on-tertiary-fixed-variant": "#4a473c",
+                        "on-secondary-fixed-variant": "#4b463e",
+                        "on-primary-container": "#ffaea5",
+                        "surface": "#fff8f1",
+                        "surface-container": "#f4ede3",
+                        "on-secondary-container": "#676259",
+                        "secondary-fixed-dim": "#cdc5bb",
+                        "primary": "#790008",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fff8f1",
+                        "primary-fixed": "#ffdad6",
+                        "on-surface-variant": "#59413e",
+                        "on-background": "#1e1b16",
+                        "on-secondary-fixed": "#1e1b15",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#9d1a1a",
+                        "secondary": "#635e55",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ccc6b8",
+                        "secondary-container": "#e7ded4",
+                        "tertiary-fixed": "#e9e2d3",
+                        "background": "#fff8f1",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffb4ab",
+                        "tertiary": "#3c392f",
+                        "secondary-fixed": "#eae1d7",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#e1beba",
+                        "on-primary-fixed-variant": "#900e12",
+                        "on-tertiary-container": "#c9c2b4",
+                        "outline": "#8d706d",
+                        "surface-variant": "#e9e1d8",
+                        "surface-tint": "#b22a27"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .noise-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface selection:bg-primary selection:text-white">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#FFF8F1]/80 backdrop-blur-md flex justify-between items-center px-4 py-4 sm:px-6 lg:px-10 lg:py-6 max-w-full mx-auto gap-3">
+        <a href="index.html">
+            <div class="text-lg sm:text-xl lg:text-2xl font-black tracking-tighter text-[#790008] font-headline">
+                NZ HOT ROD CLUB
+            </div>
+        </a>
+        <div class="hidden md:flex gap-8 items-center font-headline tracking-tight font-bold uppercase">
+            <a class="text-[#3C392F] hover:text-[#790008] transition-all duration-300" href="index.html">Home</a>
+            <a class="text-[#3C392F] hover:text-[#790008] transition-all duration-300" href="#">Events</a>
+            <a class="text-[#3C392F] hover:text-[#790008] transition-all duration-300" href="#">Membership</a>
+            <a class="text-[#790008] border-b-2 border-[#790008] pb-1" href="merch.html">Merch</a>
+            <a class="text-[#3C392F] hover:text-[#790008] transition-all duration-300" href="#">News</a>
+        </div>
+        <div class="flex items-center gap-3 sm:gap-4 lg:gap-6 shrink-0">
+            <button class="text-[#790008] flex items-center hover:opacity-80 transition-all duration-300">
+                <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+            </button>
+            <button
+                class="bg-gradient-to-br from-primary to-primary-container text-white px-3 py-2 sm:px-4 lg:px-6 rounded-lg font-headline font-bold uppercase tracking-wider text-[11px] sm:text-xs lg:text-sm whitespace-nowrap hover:brightness-110 active:scale-95 duration-200">
+                Join / Renew
+            </button>
+        </div>
+    </nav>
+    <div class="pt-20 sm:pt-24 flex min-h-screen relative flex-col lg:flex-row">
+        <div class="absolute inset-0 noise-texture z-0"></div>
+        <!-- SideNavBar -->
+        <aside
+            class="w-full lg:w-64 lg:h-screen lg:sticky top-20 sm:top-24 left-0 bg-[#FFF8F1] flex flex-col gap-2 p-4 sm:p-6 z-10 border-b border-[#8D706D]/10 lg:border-b-0">
+            <div class="mb-6">
+                <h3 class="text-lg font-black text-[#790008] font-headline">FILTER SHOP</h3>
+                <p class="text-xs font-headline font-bold uppercase tracking-widest text-[#635E55]">Precision Gear</p>
+            </div>
+            <nav class="flex flex-col gap-1">
+                <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#635E55] mb-2 px-2 opacity-60">
+                    Categories</div>
+                <div class="flex gap-2 overflow-x-auto pb-2 lg:block lg:overflow-visible lg:pb-0">
+                    <a class="flex items-center gap-3 p-2 rounded-lg text-[#3C392F] hover:bg-stone-100 transition-all duration-200 group min-w-max lg:min-w-0"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="checkroom">checkroom</span>
+                        <span class="font-headline font-bold uppercase tracking-widest text-sm">T-shirts</span>
+                    </a>
+                    <a class="flex items-center gap-3 p-2 rounded-lg text-[#3C392F] hover:bg-stone-100 transition-all duration-200 group min-w-max lg:min-w-0"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="hat_back">child_hat</span>
+                        <span class="font-headline font-bold uppercase tracking-widest text-sm">Hats</span>
+                    </a>
+                    <a class="flex items-center gap-3 p-2 rounded-lg text-[#3C392F] hover:bg-stone-100 transition-all duration-200 group min-w-max lg:min-w-0"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl"
+                            data-icon="settings_input_component">settings_input_component</span>
+                        <span class="font-headline font-bold uppercase tracking-widest text-sm">Accessories</span>
+                    </a>
+                </div>
+                <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#635E55] mt-6 mb-2 px-2 opacity-60">
+                    Brands</div>
+                <div class="flex gap-2 overflow-x-auto pb-1 lg:block lg:overflow-visible lg:pb-0">
+                    <a class="flex items-center gap-3 p-2 rounded-lg text-[#790008] bg-[#9D1A1A]/10 border-r-0 border-b-4 lg:border-b-0 lg:border-r-4 border-[#790008] font-headline font-bold uppercase tracking-widest text-sm min-w-max lg:min-w-0"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="directions_car">directions_car</span>
+                        <span>Ford</span>
+                    </a>
+                    <a class="flex items-center gap-3 p-2 rounded-lg text-[#3C392F] hover:bg-stone-100 transition-all duration-200 group min-w-max lg:min-w-0"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl"
+                            data-icon="directions_car_filled">directions_car_filled</span>
+                        <span class="font-headline font-bold uppercase tracking-widest text-sm">Holden</span>
+                    </a>
+                    <a class="flex items-center gap-3 p-2 rounded-lg text-[#3C392F] hover:bg-stone-100 transition-all duration-200 group min-w-max lg:min-w-0"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="minor_crash">minor_crash</span>
+                        <span class="font-headline font-bold uppercase tracking-widest text-sm">Classic</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+        <!-- Main Content Canvas -->
+        <main class="flex-1 p-4 sm:p-6 lg:p-10 z-10 bg-surface-container-low/30">
+            <header class="mb-8 sm:mb-10 lg:mb-12 relative overflow-hidden">
+                <div
+                    class="absolute -left-2 sm:-left-6 lg:-left-10 top-0 text-[64px] sm:text-[88px] lg:text-[120px] font-headline font-black text-[#790008]/5 leading-none select-none">
+                    GEAR
+                </div>
+                <h1
+                    class="text-3xl sm:text-4xl lg:text-5xl font-headline font-black uppercase tracking-tighter text-on-surface mb-3 sm:mb-2 max-w-3xl">
+                    The Club
+                    Showroom</h1>
+                <p class="text-secondary max-w-xl text-base sm:text-lg leading-relaxed">Genuine merchandise for the
+                    dedicated
+                    enthusiast. From classic v8 threads to custom hardware.</p>
+            </header>
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="group bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 rounded-lg flex flex-col border border-transparent hover:border-outline-variant/20">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="high quality studio shot of a deep cherry red classic Ford V8 t-shirt with vintage logo on high-end cotton"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_t-XJ9tv-6H0pYXw9_jwoMrP1RDNwwNg6FH3E_24qTpoeYCmXyW5yEiXxeI6yWRo_2S8s-zjgfC0H0X0CCS4DOY7HM_lrTP587OVdEChGMG5LinziCwWQKTmUr8bZs7OIhI-PcjqGSrcmvnIQbi7k_rc-igWuAxfHuBeuMwCs5EJfDDD6jtkglPWeRqI4dyWXBNC6rj00Wh2j42g08_YFGXLCxMuql9-yZDM9yP9CXPSvIfqE34NqqTeELG_qkvqBZXb4fyY" />
+                        <div class="absolute top-4 left-4">
+                            <span
+                                class="bg-primary text-white text-[10px] font-headline font-bold uppercase tracking-widest px-3 py-1 rounded-full">Member
+                                Choice</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 flex flex-col flex-1">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <h2
+                                class="text-xl sm:text-2xl font-headline font-bold uppercase tracking-tight text-on-surface sm:max-w-[70%]">
+                                Classic Ford V8 Tee</h2>
+                            <span class="text-xl sm:text-2xl font-headline font-light text-primary">$55.00</span>
+                        </div>
+                        <p class="text-secondary text-sm mb-6 sm:mb-8 line-clamp-2">Premium 100% cotton heavyweight tee
+                            in our
+                            signature Deep Cherry finish. Featuring the original 1932 emblem.</p>
+                        <button
+                            class="mt-auto w-full py-3.5 sm:py-4 bg-surface-container-highest text-on-surface font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors duration-300 rounded-lg flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="group bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 rounded-lg flex flex-col border border-transparent hover:border-outline-variant/20">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Holden Racing Series cap with detailed metallic grey stitching on black performance fabric, premium curve brim"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDay29dUnwm54xwDLiHbOhKV8JKvEPlxW95LfrLxZ7gjnxMoRESIHbMFVde0npwdYpQc1zbj9a51VhF5ktJIIwwO2RZpx5N7sUQEYPROUAvjV8xzTs6eDe6CFDZMRrv1cgcNc_xX67FFp0qTJYVNFTazVkV_cx6SGfoEE0cIVGwhJlCg04nMSEhkhGYhpvBXIINO_QpO4dea8rUXosJW9W2oI9bjzSqVzybNz5Sn6k4U62zcz424F0jXpSXb5ok7CXn2QQ0DBw" />
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 flex flex-col flex-1">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <h2
+                                class="text-xl sm:text-2xl font-headline font-bold uppercase tracking-tight text-on-surface sm:max-w-[70%]">
+                                Holden Racing Cap</h2>
+                            <span class="text-xl sm:text-2xl font-headline font-light text-primary">$42.00</span>
+                        </div>
+                        <p class="text-secondary text-sm mb-6 sm:mb-8">Performance headwear with precision metallic grey
+                            stitching. Engineered for the long haul.</p>
+                        <button
+                            class="mt-auto w-full py-3.5 sm:py-4 bg-surface-container-highest text-on-surface font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors duration-300 rounded-lg flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="group bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 rounded-lg flex flex-col border border-transparent hover:border-outline-variant/20">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="vintage distressed charcoal hoodie with hot rod garage graphic print on a textured concrete background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSi-0bvJ5tfwESbgzr3-8JsOiN-ICJgP5C42LcTjMpe94up9jfg8L437P4dC9OcuYmLEnzvPOlcCAD_64J4HqMOjnKOC0kozbYwHAh0KY43cOoKGPJ554GKMxPkqrkub1bo__YP9kIKWsRqnPaErtMclEREVDocEGwIJcI1NrVsmOINF3UWlpg6rrCIn16k0Bt3gTTC1nuhFvr0MXnihypQlJM1HL8CoxZYIhGS0EDDdRiW8xKcP3rXmR0oa8ZkKDTOvktF8Y" />
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 flex flex-col flex-1">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <h2
+                                class="text-xl sm:text-2xl font-headline font-bold uppercase tracking-tight text-on-surface sm:max-w-[70%]">
+                                Garage Hoodie</h2>
+                            <span class="text-xl sm:text-2xl font-headline font-light text-primary">$89.00</span>
+                        </div>
+                        <p class="text-secondary text-sm mb-6 sm:mb-8">Heavyweight brushed fleece with a custom
+                            distressed
+                            garage print. Built for the workshop morning.</p>
+                        <button
+                            class="mt-auto w-full py-3.5 sm:py-4 bg-surface-container-highest text-on-surface font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors duration-300 rounded-lg flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="group bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 rounded-lg flex flex-col border border-transparent hover:border-outline-variant/20">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="premium embroidered black baseball hat with white NZ Hot Rod Club logo in high detail"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWUi2BgfMPN3gzdF__r5rFAfSEAnYmQsykuWVtgX_EqO8c8y_KW2k5Cqz3Loy6SnyNrtn88kQO7hi9cYJTxVfWFMIAtgoj8WPP6yGFSq4M0rnslvH3yR6S5_TqNnjAbbm0uHaDoRDayRVts9ViX42a2317zw2EZ6oiGkdao0s8sYP-RISy6IMgAS8a4biy5QUHk9aREn6SFI_hWzvDa76_89cxvW0zZh2FDknqO5ObLQ-VntNs-govGcrgM0iDLvWkyncd-f4" />
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 flex flex-col flex-1">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <h2
+                                class="text-xl sm:text-2xl font-headline font-bold uppercase tracking-tight text-on-surface sm:max-w-[70%]">
+                                Club Signature Hat</h2>
+                            <span class="text-xl sm:text-2xl font-headline font-light text-primary">$38.00</span>
+                        </div>
+                        <p class="text-secondary text-sm mb-6 sm:mb-8">Our iconic signature embroidery on a structured
+                            6-panel
+                            silhouette. The essential club item.</p>
+                        <button
+                            class="mt-auto w-full py-3.5 sm:py-4 bg-surface-container-highest text-on-surface font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors duration-300 rounded-lg flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div
+                    class="group bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 rounded-lg flex flex-col border border-transparent hover:border-outline-variant/20">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="close up of a heavy polished steel Ford emblem keychain on a rustic leather background with dramatic lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVYkCec3w6I7ZQLdyPG0-drOzhy62p2upfjVpiYRsa5GQYrq-2YC_VEX6FVW5vLEebfEYfyfkmKUzFYWy8d170XY4yaEhKYdqPjIgzQhzmq_c2M3aXJ0JwwFhLwCLFyVcrdbDkdY904dHfIWBnnZhInaIVk8akPUA8fnRJUm0OdDYRsLRm_OZ_WLGUmsJXplR-R0BRXTx1u6367cuUgmEZ9GusaWE2WdS_VDshX5_FxC42Zg6ynB6gP7f3li6HfOfZgGL0_eE" />
+                    </div>
+                    <div class="p-5 sm:p-6 lg:p-8 flex flex-col flex-1">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <h2
+                                class="text-xl sm:text-2xl font-headline font-bold uppercase tracking-tight text-on-surface sm:max-w-[70%]">
+                                Ford Emblem Key</h2>
+                            <span class="text-xl sm:text-2xl font-headline font-light text-primary">$19.00</span>
+                        </div>
+                        <p class="text-secondary text-sm mb-6 sm:mb-8">Heavy-cast metal alloy with polished chrome
+                            finish. A
+                            precision-engineered accessory for your keys.</p>
+                        <button
+                            class="mt-auto w-full py-3.5 sm:py-4 bg-surface-container-highest text-on-surface font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors duration-300 rounded-lg flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="w-full py-12 sm:py-16 px-4 sm:px-6 lg:px-10 bg-[#3C392F] text-[#FFF8F1] z-20 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl mx-auto">
+            <div class="flex flex-col gap-6">
+                <div class="text-xl font-bold text-[#FFF8F1] font-headline uppercase tracking-tight">NZ HOT ROD CLUB
+                </div>
+                <p class="font-body text-stone-400 max-w-sm leading-relaxed">Since 1958, preserving the heritage and
+                    driving the future of hot rodding in New Zealand. Join the legacy.</p>
+                <div class="text-stone-400 text-sm mt-4 font-body">
+                    © 2024 New Zealand Hot Rod Club. Engineered for the Enthusiast.
+                </div>
+            </div>
+            <div class="flex flex-col md:items-end gap-6">
+                <nav class="flex flex-wrap md:justify-end gap-x-8 gap-y-4 font-body text-stone-400">
+                    <a class="hover:text-[#FFF8F1] transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-[#FFF8F1] transition-colors" href="#">Club Rules</a>
+                    <a class="hover:text-[#FFF8F1] transition-colors" href="#">Contact Us</a>
+                    <a class="hover:text-[#FFF8F1] transition-colors" href="#">Archive</a>
+                </nav>
+                <div class="flex gap-4 mt-8">
+                    <div
+                        class="w-10 h-10 rounded bg-white/5 flex items-center justify-center hover:bg-primary transition-all cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">share</span>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded bg-white/5 flex items-center justify-center hover:bg-primary transition-all cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">mail</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

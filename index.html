@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NZ HOT ROD CLUB | Engineered for the Enthusiast</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#410002",
+                        "on-tertiary-container": "#c9c2b4",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#ffaea5",
+                        "surface-variant": "#e9e1d8",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#e1beba",
+                        "on-surface-variant": "#59413e",
+                        "primary-fixed": "#ffdad6",
+                        "primary": "#790008",
+                        "on-surface": "#1e1b16",
+                        "surface-dim": "#e0d9d0",
+                        "on-secondary-fixed-variant": "#4b463e",
+                        "tertiary-container": "#545045",
+                        "inverse-primary": "#ffb4ab",
+                        "surface-bright": "#fff8f1",
+                        "secondary-fixed-dim": "#cdc5bb",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f7f0e6",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#8d706d",
+                        "secondary-fixed": "#eae1d7",
+                        "primary-container": "#9d1a1a",
+                        "secondary": "#635e55",
+                        "surface-container-high": "#eee7de",
+                        "on-primary-fixed-variant": "#900e12",
+                        "surface": "#fff8f1",
+                        "inverse-surface": "#33302a",
+                        "on-background": "#1e1b16",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1e1b12",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ccc6b8",
+                        "on-secondary-container": "#676259",
+                        "background": "#fff8f1",
+                        "surface-container": "#f4ede3",
+                        "tertiary": "#3c392f",
+                        "surface-container-highest": "#e9e1d8",
+                        "on-secondary-fixed": "#1e1b15",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#4a473c",
+                        "surface-container-low": "#faf3e9",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-tint": "#b22a27",
+                        "secondary-container": "#e7ded4",
+                        "tertiary-fixed": "#e9e2d3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .grainy-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(30, 27, 22, 0.9) 0%, rgba(30, 27, 22, 0.4) 50%, rgba(30, 27, 22, 0.1) 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#FFF8F1]/80 backdrop-blur-md dark:bg-stone-900/80 bg-gradient-to-b from-stone-200/20 to-transparent">
+        <div class="flex justify-between items-center px-10 py-6 max-w-full mx-auto">
+            <a class="text-2xl font-black tracking-tighter text-[#790008] dark:text-[#9D1A1A] font-headline uppercase"
+                href="index.html">NZ HOT ROD CLUB</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#790008] border-b-2 border-[#790008] pb-1 font-headline tracking-tight font-bold uppercase text-sm"
+                    href="index.html">Home</a>
+                <a class="text-[#3C392F] dark:text-[#FFF8F1] hover:text-[#790008] transition-all duration-300 font-headline tracking-tight font-bold uppercase text-sm"
+                    href="#">Events</a>
+                <a class="text-[#3C392F] dark:text-[#FFF8F1] hover:text-[#790008] transition-all duration-300 font-headline tracking-tight font-bold uppercase text-sm"
+                    href="#">Membership</a>
+                <a class="text-[#3C392F] dark:text-[#FFF8F1] hover:text-[#790008] transition-all duration-300 font-headline tracking-tight font-bold uppercase text-sm"
+                    href="merch.html">Merch</a>
+                <a class="text-[#3C392F] dark:text-[#FFF8F1] hover:text-[#790008] transition-all duration-300 font-headline tracking-tight font-bold uppercase text-sm"
+                    href="#">News</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-lg font-headline font-bold uppercase tracking-wide text-sm hover:scale-95 transition-all duration-200 shadow-lg shadow-surface-tint/20">
+                    Join / Renew
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative h-[870px] w-full overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover"
+                    data-alt="A lineup of colorful vintage hot rods parked at a coastal New Zealand car meet during golden hour with clear skies."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwBZ6NEn2OBuxjzg-XBqWxen1Lj2rqNiR8SNs_PiU3OzvT-kibcp0rzidJlbfegx5lTviCb-CTqshhTrxNh1Jk1Al5OdiYKoXSKx7kVmWlAVJC1Ap9xYLjJJEwxbf-vftnmxaSDGls_0XwYd5GAGCs7ZpapTKL_-f7cRboNHv2N1bWfrv3u0LVjVbHeUaKTtrdWHvz998A_tk8pgRKf7zeh3wkirvA4_8QUxOR--nr0fmBGfePGAsdGURxCkCJPO4J2R-Y7mM" />
+                <div class="absolute inset-0 hero-gradient"></div>
+                <div class="absolute inset-0 grainy-overlay"></div>
+            </div>
+            <div class="relative z-10 flex flex-col justify-center h-full px-10 max-w-7xl mx-auto">
+                <h1
+                    class="font-headline font-black text-white text-6xl md:text-8xl uppercase tracking-tighter leading-[0.9] max-w-4xl mb-6">
+                    Join the New Zealand <span class="text-primary-container">Hot Rod</span> Community
+                </h1>
+                <p class="text-surface-variant font-body text-xl md:text-2xl max-w-2xl mb-10 leading-relaxed">
+                    Celebrating the heritage, the craftsmanship, and the roar of the V8. Since 1961, we’ve been the home
+                    for Kiwi builders and enthusiasts.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-lg font-headline font-black uppercase tracking-widest text-lg hover:brightness-110 transition-all shadow-xl shadow-black/40">
+                        Join Now
+                    </button>
+                    <button
+                        class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-headline font-black uppercase tracking-widest text-lg hover:bg-white/20 transition-all">
+                        View Events
+                    </button>
+                </div>
+            </div>
+            <!-- Large background text -->
+            <div
+                class="absolute bottom-[-2rem] right-[-2rem] opacity-5 pointer-events-none select-none hidden lg:block">
+                <span class="font-headline font-black text-[20rem] text-white uppercase tracking-tighter">1961</span>
+            </div>
+        </section>
+        <!-- Events Section -->
+        <section class="py-24 px-10 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-end justify-between mb-12">
+                    <div>
+                        <span
+                            class="font-label font-bold text-primary uppercase tracking-[0.2em] text-sm block mb-2">The
+                            Calendar</span>
+                        <h2 class="font-headline font-black text-5xl uppercase tracking-tighter">Upcoming Meets</h2>
+                    </div>
+                    <a class="font-label font-bold text-secondary uppercase border-b-2 border-outline-variant pb-1 hover:text-primary transition-colors"
+                        href="#">All Events</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div
+                        class="group bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="h-64 overflow-hidden relative">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Close up of a shiny red vintage hot rod engine with chrome parts in a garage setting with dramatic lighting."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6jGjulXyU5tb_aezkrOT1VvYHYCWJYi5_bQh2ltozL5Xd0yl0JiPwAhXS4F_8c6G3lXXToXBGtpCi12dFLFPZdl7FTmqQWiAg_TCbufd6vfIjPcOBhIPkpxWzUOU-IiPxFGbq8BMDNyM_bFQfH9ABdirndvFL9oe_z4BOk5osvpCHXtWSO7254Ez6zvH1IA4fXXFFwhbUQQ-fWn_DpVpj9TTGpaIYRtUeELKeTb39Hzjyj2JD5zrBEub8q7EKA7Z4CG1ahr0" />
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-headline font-bold text-xs uppercase tracking-widest">
+                                Featured</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4 text-secondary">
+                                <span class="material-symbols-outlined text-sm">calendar_today</span>
+                                <span class="font-label font-bold text-xs uppercase tracking-wider">Jan 24 - 28,
+                                    2024</span>
+                            </div>
+                            <h3
+                                class="font-headline font-bold text-2xl uppercase mb-2 group-hover:text-primary transition-colors">
+                                Hot Rod Nationals</h3>
+                            <p class="text-secondary mb-6 line-clamp-2">The premier event of the season, showcasing the
+                                finest steel and craftsmanship in the country.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-surface-container-high">
+                                <span class="text-sm font-medium flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-xs">location_on</span> Taupo</span>
+                                <button
+                                    class="text-primary font-headline font-bold uppercase text-sm tracking-wider">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div
+                        class="group bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A chrome hubcap reflecting a sunny beach setting, capturing the essence of a summer car meet."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnhk34N2tVCTB4SslfTMZKCqK34Hl8xzMy-aXwV0XZKUW6Z5lUfYBQHkNAdJG_Zlqd2e6fzzkHZTpyJWesNWDaT4Vfkjhtsm9EZ66GJksbw5e-g9gRee_6LqG-RnN_5VNGscvLcB7VKxEdaZM8NToGEQAmC-C_SSMvQIR4Og_980wmt7Q9F9rU-z3SASEe34MwlvMIevV2GyKyQB4G71INwrwiw2WaU1nPIoo8mWHN3cVLacb35BErUD78GRCK-a6JHkL0TRg" />
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4 text-secondary">
+                                <span class="material-symbols-outlined text-sm">calendar_today</span>
+                                <span class="font-label font-bold text-xs uppercase tracking-wider">Mar 20 - 24,
+                                    2024</span>
+                            </div>
+                            <h3
+                                class="font-headline font-bold text-2xl uppercase mb-2 group-hover:text-primary transition-colors">
+                                Beach Hop</h3>
+                            <p class="text-secondary mb-6 line-clamp-2">Nostalgia, music, and of course, hot rods on the
+                                beautiful Coromandel coast.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-surface-container-high">
+                                <span class="text-sm font-medium flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-xs">location_on</span> Whangamata</span>
+                                <button
+                                    class="text-primary font-headline font-bold uppercase text-sm tracking-wider">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div
+                        class="group bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Interior of a classic hot rod with a steering wheel and dashboard, focusing on the vintage craftsmanship and details."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5aN_8gpj4P782uzWvinB_iMiQZWjJvq0TxdnEQirByeDZRXMP03SZ2Va83Oz3doY8W00I3q8zzz0QAVGNr5kSQur5kvQXDoqFGM6KmoBBy3tc0ZbOYTPzq6OLBbTY00kWBZ2eeeiEvtqB7odE5er-53_FB4jG-4bjNDZRQ8xS70-omOD4f-ctSCmPFJKHbwJryrtLUoR5mZStD8KRI8Z8StzNUq3GJKBs3mYP11gMzkYQM5n0uO_1cQsha4A7ckP3dN2BzAg" />
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4 text-secondary">
+                                <span class="material-symbols-outlined text-sm">calendar_today</span>
+                                <span class="font-label font-bold text-xs uppercase tracking-wider">First Thursday
+                                    Monthly</span>
+                            </div>
+                            <h3
+                                class="font-headline font-bold text-2xl uppercase mb-2 group-hover:text-primary transition-colors">
+                                Club Night</h3>
+                            <p class="text-secondary mb-6 line-clamp-2">Informal gathering for members to catch up on
+                                builds, swap parts, and share stories.</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-surface-container-high">
+                                <span class="text-sm font-medium flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-xs">location_on</span> Various
+                                    Locations</span>
+                                <button
+                                    class="text-primary font-headline font-bold uppercase text-sm tracking-wider">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Membership Section (Asymmetrical Layout) -->
+        <section class="py-24 bg-surface-container-low overflow-hidden">
+            <div class="max-w-7xl mx-auto px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="bg-surface-container-highest rounded-xl p-1 lg:p-4 rotate-[-2deg]">
+                        <img class="rounded-lg shadow-2xl relative z-10"
+                            data-alt="Action shot of a custom matte black hot rod driving on a coastal road in New Zealand with mountains in the background."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4y7y7PuBqAqgaRzE0wgGejtu3JK5SYYGqqQ0UR4wDzEFqyi9FQ3fXPnvc5D0zbZl-5_tgEiMGRpOemd86ei0X4t-QBaSVZqGM7XYZs2u17KbJ9sm7Q8NP6kGr3XN9M6qo_VmQZRJzVWUhYimPw-lof7yY9KPkuS0xefkt8gqppD1NUT5ML98C-PhAx03F0C55sk8Y6qdauayqOGZZqLqqke3982zqGaSLMkIJqUvGene6QyBNPmx2ULL1nSCMRLARXrfKE_Y" />
+                    </div>
+                    <!-- Decorative element -->
+                    <div
+                        class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-10">
+                    </div>
+                </div>
+                <div class="relative z-10">
+                    <span class="font-label font-bold text-primary uppercase tracking-[0.2em] text-sm block mb-2">Get
+                        Involved</span>
+                    <h2 class="font-headline font-black text-5xl uppercase tracking-tighter mb-8 leading-tight">Become a
+                        Part of the NZ Legacy</h2>
+                    <div class="space-y-6 mb-10">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-white rounded flex items-center justify-center shadow-sm">
+                                <span class="material-symbols-outlined text-primary" data-weight="fill">verified</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg uppercase">Access to Events</h4>
+                                <p class="text-secondary">Exclusive entry to sanctioned meets, runs, and the National
+                                    Championship.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-white rounded flex items-center justify-center shadow-sm">
+                                <span class="material-symbols-outlined text-primary"
+                                    data-weight="fill">auto_stories</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg uppercase">Club Magazine</h4>
+                                <p class="text-secondary">Monthly subscription to 'The Roadster', filled with technical
+                                    advice and features.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-white rounded flex items-center justify-center shadow-sm">
+                                <span class="material-symbols-outlined text-primary" data-weight="fill">build</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg uppercase">Technical Support</h4>
+                                <p class="text-secondary">Connect with master builders for advice on your restoration or
+                                    custom project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg border-l-4 border-primary shadow-md">
+                        <p class="text-on-surface font-medium mb-4 italic">Renewing your membership? Access your profile
+                            to pay online instantly.</p>
+                        <button
+                            class="bg-primary text-white px-8 py-3 rounded font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary-container transition-all">
+                            Sign Up or Renew
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- News & Merch (Bento-style layout) -->
+        <section class="py-24 px-10 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- News Feed (2/3 width) -->
+                    <div class="lg:col-span-2">
+                        <h2 class="font-headline font-black text-4xl uppercase tracking-tighter mb-8">Recent Updates
+                        </h2>
+                        <div class="space-y-8">
+                            <article
+                                class="flex flex-col md:flex-row gap-6 bg-surface-container-low p-6 rounded-lg group cursor-pointer hover:bg-surface-container transition-colors">
+                                <div class="w-full md:w-48 h-32 flex-shrink-0 overflow-hidden rounded">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                                        data-alt="Close up of a classic car steering wheel with chrome finish and wooden detailing."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRfSjtJ6MSM2FFUMnUQuszYIG0HXdXn3jDJs48cy2z4p_vFPefGYwusGBmltZ0wE9cYsQQR154WDHgfIf2aJQMqFqm5bJjyiLq3SXdPeC0i7jLf_VsZWOYq3x7OtGZaohVFgBdHUBcSJszY-gEbpznV4YKHZRx8ioT4FQMcITLipEes9Oj-OM7ICoudHu8xHWdw3cCXO9SA2JMLnXik7PRlsYvcglzphPZLh7MjoOOKSl4uVKkP198ogYz4AFj23UgalqCkwM" />
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-primary font-label font-bold text-xs uppercase tracking-widest">Technical</span>
+                                    <h3
+                                        class="font-headline font-bold text-xl uppercase mt-1 mb-2 group-hover:text-primary transition-colors">
+                                        New Safety Regulations for 2024 Builds</h3>
+                                    <p class="text-secondary text-sm">Update on frame specifications and roll-bar
+                                        requirements as mandated by the NZ Transport Agency.</p>
+                                    <time class="block mt-4 text-xs text-secondary/60">Posted Dec 12, 2023</time>
+                                </div>
+                            </article>
+                            <article
+                                class="flex flex-col md:flex-row gap-6 bg-surface-container-low p-6 rounded-lg group cursor-pointer hover:bg-surface-container transition-colors">
+                                <div class="w-full md:w-48 h-32 flex-shrink-0 overflow-hidden rounded">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                                        data-alt="Blurred workshop background with sparks flying from metal work, capturing the spirit of car building."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6exMIpDwMKiU0HxayYr50bAHZNIYoXAm0Xt36uvRU3ga_kquPW1RQC0R8a53lKSz3Z7x1XlmzRANH3fxIn6BJsl-7sy_wIYLesKWJvoNJdjDrxHI-Bgs2ux5n-NJjXAp6Ea7QI05Phaai8c2lCrjM8gV5NdzGmO7lvof81Fsi7zMglviwMcJMsgcZiJSSxdpwqOdk_WCqVp3IoxxoADDnk-ck1nzLtCouCHOtvFCtqCrcYqtwUFWOFfjHVvzSabb9qaIjIpI" />
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-primary font-label font-bold text-xs uppercase tracking-widest">Community</span>
+                                    <h3
+                                        class="font-headline font-bold text-xl uppercase mt-1 mb-2 group-hover:text-primary transition-colors">
+                                        Clubhouse Restoration Update</h3>
+                                    <p class="text-secondary text-sm">Thanks to our volunteers, the main hall floor is
+                                        now finished. Join us for a sneak peek this weekend.</p>
+                                    <time class="block mt-4 text-xs text-secondary/60">Posted Dec 05, 2023</time>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- Merch (1/3 width) -->
+                    <div
+                        class="bg-tertiary-container text-on-tertiary-container p-8 rounded-xl relative overflow-hidden">
+                        <h2 class="font-headline font-black text-4xl uppercase tracking-tighter mb-8 text-white">Club
+                            Shop</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-center bg-black/20 p-4 rounded-lg">
+                                <div class="w-16 h-16 bg-surface/10 rounded flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white/50 text-3xl">checkroom</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline font-bold uppercase text-white">Logo Tee</h4>
+                                    <span class="text-sm opacity-70">Deep Cherry Red</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-center bg-black/20 p-4 rounded-lg">
+                                <div class="w-16 h-16 bg-surface/10 rounded flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white/50 text-3xl">shopping_bag</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline font-bold uppercase text-white">Embroidered Cap</h4>
+                                    <span class="text-sm opacity-70">Graphite Grey</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 p-6 bg-primary text-white rounded text-center">
+                            <p class="font-headline font-black uppercase text-2xl tracking-tighter mb-2">Coming Soon</p>
+                            <p class="text-xs uppercase tracking-widest opacity-80">Full Gear Shop Launching 2024</p>
+                        </div>
+                        <!-- Abstract decorative car silhouette -->
+                        <div class="absolute bottom-[-10px] right-[-40px] opacity-10">
+                            <span class="material-symbols-outlined text-[12rem]"
+                                data-weight="fill">directions_car</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter Section -->
+        <section class="py-20 bg-[#3C392F]">
+            <div class="max-w-4xl mx-auto px-10 text-center">
+                <h2 class="font-headline font-black text-4xl text-white uppercase tracking-tighter mb-4">Stay in the
+                    Loop</h2>
+                <p class="text-stone-400 mb-10 text-lg">Receive club updates, event reminders, and tech tips directly to
+                    your inbox.</p>
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input
+                        class="flex-grow bg-white/5 border-2 border-white/10 rounded px-6 py-4 text-white focus:outline-none focus:border-primary transition-all"
+                        placeholder="Enter your email address" type="email" />
+                    <button
+                        class="bg-primary text-white px-10 py-4 rounded font-headline font-black uppercase tracking-widest hover:bg-primary-container transition-all">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#3C392F] dark:bg-black w-full py-16 px-10 font-['Work_Sans'] text-base tracking-wide">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl mx-auto">
+            <div>
+                <a class="text-xl font-bold text-[#FFF8F1] font-headline uppercase mb-6 block tracking-tighter"
+                    href="#">NZ HOT ROD CLUB</a>
+                <p class="text-stone-400 max-w-sm mb-8 leading-relaxed">
+                    Preserving hot rod culture across New Zealand since 1961. Affiliated with the NZHRA. Built for those
+                    who know the difference.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h5 class="text-white font-headline font-bold uppercase tracking-widest text-sm mb-6">Quick Links
+                    </h5>
+                    <ul class="space-y-4">
+                        <li><a class="text-stone-400 hover:text-[#FFF8F1] transition-colors" href="#">Privacy Policy</a>
+                        </li>
+                        <li><a class="text-stone-400 hover:text-[#FFF8F1] transition-colors" href="#">Club Rules</a>
+                        </li>
+                        <li><a class="text-stone-400 hover:text-[#FFF8F1] transition-colors" href="#">Contact Us</a>
+                        </li>
+                        <li><a class="text-stone-400 hover:text-[#FFF8F1] transition-colors" href="#">Archive</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-headline font-bold uppercase tracking-widest text-sm mb-6">Contact</h5>
+                    <address class="not-italic text-stone-400 space-y-4">
+                        <p class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                            Auckland, New Zealand
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-sm text-primary">mail</span>
+                            info@nzhotrodclub.org.nz
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-stone-400 text-sm opacity-90">© 2024 New Zealand Hot Rod Club. Engineered for the Enthusiast.
+            </p>
+            <div class="flex gap-6 text-sm">
+                <span class="text-primary font-bold uppercase tracking-wider">EST. 1961</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
